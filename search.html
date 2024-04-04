@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search</title>
+    <!-- Link Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <!-- Link custom CSS -->
+    <link rel="stylesheet" type="text/css" href="styles_search.css">
+</head>
+<body>
+    <div class="container mt-4">
+        <!-- Buttons -->
+        <div class="btn-group mb-3">
+            <button type="button" class="btn btn-primary" id="seeAllRecordsBtn">See all records</button>
+            <!-- Add the second button here -->
+            <button type="button" class="btn btn-secondary" id="searchRecordsBtn">Search Records</button>
+            <button type="button" class="btn btn-secondary" id="button3">Button 3</button>
+        </div>
+
+        <div class="table-responsive" id="records-table" style="display: none;">
+            <table class="table table-striped table-bordered">
+                <thead class="thead-dark" id="table-header-all"></thead>
+                <tbody id="records-container-all"></tbody>
+            </table>
+        </div>
+    </div>
+
+    <div id="searchForm" style="display: none;">
+        <form id="searchForm">
+            <div class="form-group">
+                <label for="accountInput">Account:</label>
+                <input type="text" id="accountInput" class="form-control">
+            </div>
+            <div class="form-group">
+                <label for="activityInput">Activity:</label>
+                <input type="text" id="activityInput" class="form-control">
+            </div>
+            <div class="form-group">
+                <label for="lineOfBusinessInput">Line of Business:</label>
+                <select id="lineOfBusinessInput" class="form-control">
+                    <option value="">Select a line of business</option>
+                    <option value="GTPL">GTPL</option>
+                    <option value="PL">PL</option>
+                    <option value="EL">EL</option>
+                    <option value="PI">PI</option>
+                    <option value="TPL & PL">TPL & PL</option>
+                    <option value="TPL & PI">TPL & PI</option>
+                    <option value="TPL & PI & EL">TPL & PI & EL</option>
+                    <option value="Terrorism">Terrorism</option>
+                    <option value="ENV. LIAB">ENV. LIAB</option>
+                </select>
+            </div>
+            <button type="button" id="searchButton" class="btn btn-primary">Search</button>
+        </form>
+    </div>
+
+    <!-- Table to display search results -->
+    <div class="table-responsive" id="records-table-search" style="display: none;">
+        <table class="table table-striped table-bordered">
+            <thead class="thead-dark" id="table-header-search"></thead>
+            <tbody id="records-container-search"></tbody>
+        </table>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <!-- Include Bootstrap JS -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="script_search.js"></script>
+</body>
+</html>

@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Form</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <form id="userForm">
+        <div class="form-group">
+            <label for="account">Account:</label>
+            <input type="text" id="account" name="account" required>
+        </div>
+
+        <div class="form-group" style="display: none;" id="countryField">
+            <label for="country">Country:</label>
+            <select id="country" name="country" required>
+                <option value="">Select a country</option>
+            </select>
+        </div>
+
+        <div class="form-group" style="display: none;" id="typeField">
+            <label for="type">Type:</label><br>
+            <input type="radio" id="insurance" name="type" value="insurance" required>
+            <label for="insurance">Insurance</label><br>
+            <input type="radio" id="reinsurance" name="type" value="reinsurance">
+            <label for="reinsurance">Reinsurance</label><br>
+        </div>
+
+        <div class="form-group" style="display: none;" id="activityField">
+            <label for="activity">Activity:</label>
+            <input type="text" id="activity" name="activity" required>
+            <label for="comments">Comments:</label>
+            <textarea id="comments" name="comments" rows="4"></textarea>
+        </div>
+
+        <div class="form-group" style="display: none;" id="lineOfBusinessField">
+            <label for="lineOfBusiness">Line of Business:</label>
+            <select id="lineOfBusiness" name="lineOfBusiness" required>
+                <option value="">Select a line of business</option>
+                <option value="GTPL">GTPL</option>
+                <option value="PL">PL</option>
+                <option value="EL">EL</option>
+                <option value="PI">PI</option>
+                <option value="TPL & PL">TPL & PL</option>
+                <option value="TPL & PI">TPL & PI</option>
+                <option value="TPL & PI & EL">TPL & PI & EL</option>
+                <option value="Terrorism">Terrorism</option>
+                <option value="ENV. LIAB">ENV. LIAB</option>
+            </select>
+        </div>
+
+        <div class="form-group" style="display: none;" id="turnoverField">
+            <label for="turnover">Turnover:</label>
+            <input type="number" id="turnover" name="turnover" required>
+        </div>
+
+
+        <div class="form-group" style="display: none;" id="limitOfIndemnityField">
+            <label for="limitOfIndemnity">Limit of Indemnity:</label>
+            <div id="limitOfIndemnityOptions">
+                <!-- Integer fields will be dynamically added here based on the selected Line of Business -->
+            </div>
+        </div>
+
+        <div class="form-group" style="display: none;" id="insuranceCompanyField">
+            <label for="insuranceCompany">Insurance Company:</label>
+            <select id="insuranceCompany" name="insuranceCompany" >
+                    
+            </select>
+        </div>
+        
+        <div class="form-group" style="display: none;" id="cedantField">
+            <label for="cedant">Cedant:</label>
+            <select id="cedant" name="cedant">
+                
+            </select>
+        </div>
+        
+        <div class="form-group" style="display: none;" id="reinsuranceCompanyField">
+            <label for="reinsuranceCompany">Reinsurance Company:</label>
+            <select id="reinsuranceCompany" name="reinsuranceCompany">
+            </select>
+        </div>
+
+        <div class="form-group" style="display: none;" id="underwriterField">
+            <label for="underwriter">Underwriter:</label>
+            <input type="text" id="underwriter" name="underwriter">
+        </div>
+
+        <div class="form-group" style="display: none;" id="offerAcceptedField">
+            <label for="offerAccepted">Offer Accepted:</label><br>
+            <input type="radio" id="offerAcceptedYes" name="offerAccepted" value="yes" required>
+            <label for="offerAcceptedYes">Yes</label><br>
+            <input type="radio" id="offerAcceptedNo" name="offerAccepted" value="no">
+            <label for="offerAcceptedNo">No</label><br>
+        </div>
+        
+        <div class="form-group" style="display: none;" id="offerRejectedReasonField">
+            <label for="offerRejectedReason">Reason for Rejection:</label><br>
+            <textarea id="offerRejectedReason" name="offerRejectedReason" rows="4"></textarea>
+        </div>
+
+        <div class="form-group" style="display: none;" id="premiumField">
+            <label for="premium">Premium:</label>
+            <input type="number" id="premium" name="premium" required>
+        </div>
+        
+        <div class="form-group" style="display: none;" id="calculatedBoxField">
+            <label for="calculatedBox">Rate</label>
+            <input type="text" id="calculatedBox" name="calculatedBox" readonly>
+        </div>
+        
+        <div class="form-group" style="display: none;" id="submitBtnField">
+            <button type="submit" id="submitBtn">Submit</button>
+        </div>
+        
+    </form>
+
+    <script src="script.js"></script>
+</body>
+</html>
