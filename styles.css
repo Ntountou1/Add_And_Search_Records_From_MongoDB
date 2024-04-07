@@ -4,8 +4,8 @@
 
 body {
     font-family: Arial, sans-serif;
-    
-    background-color: light-dark(#efedea, #223a2c);
+    background-image: url('https://wallpapercave.com/wp/wp8552433.jpg');
+    background-size: cover;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -15,7 +15,9 @@ body {
     height: 100vh;
 }
 
-
+label{
+    color: black;
+}
 
 .container {
     max-width: 600px;
